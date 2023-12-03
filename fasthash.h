@@ -27,9 +27,9 @@
 #define _FASTHASH_H
 
 #include <stdint.h>
-#include <stdio.h>
+#include <stddef.h>
 
-#ifdef __cplusplus
+#if defined(__cplusplus)
 extern "C" {
 #endif
 
@@ -39,7 +39,7 @@ extern "C" {
  * @len:  data size
  * @seed: the seed
  */
-	uint32_t fasthash32(const void *buf, size_t len, uint32_t seed);
+uint32_t fasthash32(const void *buf, size_t len, uint32_t seed);
 
 /**
  * fasthash64 - 64-bit implementation of fasthash
@@ -47,9 +47,9 @@ extern "C" {
  * @len:  data size
  * @seed: the seed
  */
-	uint64_t fasthash64(const void *buf, size_t len, uint64_t seed);
+uint64_t fasthash64(const void *buf, size_t len, uint64_t seed);
 
-#ifdef __cplusplus
+#if defined(__cplusplus)
 }
 #endif
 
